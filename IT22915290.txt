@@ -1,0 +1,52 @@
+IT22915290
+S.N Samarahewa
+MLB/WD/G350
+
+
+Contributing to the payment process of the system
+
+insert payment details 
+delete the purchase history(from customer's side only)
+view purchase history
+update the plan using auto increment 
+
+pacakage-com.IT22915290
+                 customerInsert.java
+                 DBconnect.java
+                 deletecustomerservlet.java
+                 purchase.java
+                 purchase_servelet.java
+                 purchaseDButill.java
+                 updatecustomerservlet.java
+
+            relavent jsp files 
+		 
+		pages > IT22915290
+		 
+                 customerinsert.jsp
+                 deletecustomer.jsp
+                 payment.jsp
+                 plan.jsp
+                 sucess.jsp
+                 unsucess.jsp
+                 updatecustomer.jsp
+                 useraccount.jsp
+
+CREATE TABLE `listnerpurchase` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(45) DEFAULT NULL,
+  `lastname` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `plan` varchar(45) DEFAULT NULL,
+  `amount` varchar(45) DEFAULT NULL,
+  `autoincrement` varchar(45) DEFAULT NULL,
+  `cardnumber` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO `listnerpurchase` VALUES (1,'gg','www','dd','Individual','500','yes','2222')
+INSERT INTO `listnerpurchase` VALUES (2,'sdde','ee','eee','Individual','500','yes','333333')
+INSERT INTO `listnerpurchase` VALUES (5,'tharu','hansika','tharu@123','individual','1000','yes','1785295')
+INSERT INTO `listnerpurchase` VALUES (6,'malini','hasra','malini@123','individual','1000','yes','7258910')
+
+         

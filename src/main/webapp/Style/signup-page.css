@@ -1,0 +1,14 @@
+@charset "ISO-8859-1";
+
+body {
+	background-color: #1B1B1B;
+	color: white ;
+}
+
+.card{
+	transition: 0.3s;	
+}
+
+.card:hover {
+	transform: scale(1.15);
+}

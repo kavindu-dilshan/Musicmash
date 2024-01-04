@@ -1,0 +1,52 @@
+IT22581570
+Jayalath K.M.K.D
+MLB/WD/G350
+
+//Contribution as a Registered Artist
+
+	Upload Song
+	View Uploaded Songs
+	Update Song Details
+	Delete Song
+
+
+//Package -> com.IT22581570
+
+	Song.java
+	SongDBConnect.java
+	UploadServlet.java
+	UpdateServlet.java
+	DeleteServlet.java
+
+
+//Relevant jsp files
+
+	pages > IT22581570 Folder
+
+	SongUpload.jsp
+	UploadSuccess.jsp
+	SongUpdate.jsp
+	EditSuccess.jsp
+	SongDelete.jsp
+	DeleteSuccess.jsp
+	SongsUser.jsp
+	SongsAdmin.jsp
+	ArtistError.jsp
+
+
+//Table
+
+CREATE TABLE `songs` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(150) DEFAULT NULL,
+  `artist` varchar(150) DEFAULT NULL,
+  `genre` varchar(150) DEFAULT NULL,
+  `filename` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO songs VALUES (1, 'Believer', 'Imagine Dragons', 'Rock', 'Sample.mp3');
+INSERT INTO songs VALUES (2, 'Mal Mitak Thiyanna', 'Kasun Kalhara', 'Pop', 'Sample.mp3');
+INSERT INTO songs VALUES (3, 'Sanasennam Ma', 'Senaka Batagoda', 'Classic', 'Sample.mp3');
+INSERT INTO songs VALUES (4, 'Saragaye', 'Sanuka Wickramasinghe', 'Rock', 'Sample.mp3');
+INSERT INTO songs VALUES (5, 'Perfect', 'Ed Sheeran', 'Pop', 'Sample.mp3');

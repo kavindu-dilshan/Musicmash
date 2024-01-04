@@ -1,0 +1,54 @@
+Project - Online Music Store
+
+Cotributor
+ 
+Wasala W.M.S.N
+IT22576866
+
+Group - MLB/WD/G350
+
+Contributions
+
+1. SignUp.
+2. Login.
+3. View Listener Account.
+4. Update Listner Account Details.
+5. Delete Listner Account Details.
+
+
+Package - com.IT22576866
+
+DBConnect.java
+DeleteListenerServlet.java
+Listener.java
+ListenerDBUtil.java
+ListenerInsertServlet.java
+LoginServlet.java
+UpdateListenerServlet.java
+
+
+Relavent jsp files
+ pages > IT22576866 
+
+deletelistener.jsp
+listeneraccount.jsp
+listenerInsert.jsp
+listenerLogin.jsp
+login.jsp
+signup.jsp
+success.jsp
+unsuccess.jsp
+updateListener.jsp
+
+
+CREATE TABLE `listener_table` (
+  `listener_id` int NOT NULL AUTO_INCREMENT,
+  `listener_fname` varchar(45) DEFAULT NULL,
+  `listener_lname` varchar(45) DEFAULT NULL,
+  `listener_phone` varchar(45) DEFAULT NULL,
+  `listener_email` varchar(45) DEFAULT NULL,
+  `listener_username` varchar(45) DEFAULT NULL,
+  `listener_password` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`listener_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+

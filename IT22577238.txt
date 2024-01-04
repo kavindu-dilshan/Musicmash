@@ -1,0 +1,101 @@
+Project - Online Music Store
+
+Cotributor
+ 
+Dasanayake D.K
+IT22577238
+
+Group - MLB/WD/G350
+
+Contributions
+
+1. Admin Dashboard (count and sum of tables in listener, artist, songs and purchases).
+2. Listeners Management (View list of listener in a table)
+3. Artists Management (View list of artist in a table)
+4. Generate Reports.
+5. View Report.
+6. Delete Report
+
+
+Package - com.IT22577238
+
+AdminArtistDelete.java
+adminDBUtil.java
+adminListenerDel.java
+CountUsersServlet.java
+DBConnect.java
+Report.java
+
+
+Relavent jsp files
+ pages > IT22577238 
+
+admin.jsp
+adminnav.jsp
+adminReport.jsp
+artistManage.jsp
+createReport.jsp
+listenerManage.jsp
+reportDetails.jsp
+viewReport.jsp
+index.jsp
+header-home.jsp (resources)
+header-web.jsp (resources)
+
+SQL Tables Create Queries
+
+Admin Table
+
+CREATE TABLE `admin_table` (
+  `admin_id` int NOT NULL AUTO_INCREMENT,
+  `admin_fname` varchar(45) DEFAULT NULL,
+  `admin_lname` varchar(45) DEFAULT NULL,
+  `admin_email` varchar(45) DEFAULT NULL,
+  `admin_phone` varchar(45) DEFAULT NULL,
+  `admin_position` varchar(45) DEFAULT NULL,
+  `admin_authkey` varchar(45) DEFAULT NULL,
+  `admin_password` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`admin_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+Listener Table
+
+CREATE TABLE `listener_table` (
+  `listener_id` int NOT NULL AUTO_INCREMENT,
+  `listener_fname` varchar(45) DEFAULT NULL,
+  `listener_lname` varchar(45) DEFAULT NULL,
+  `listener_phone` varchar(45) DEFAULT NULL,
+  `listener_email` varchar(45) DEFAULT NULL,
+  `listener_username` varchar(45) DEFAULT NULL,
+  `listener_password` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`listener_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+Artist Table
+
+CREATE TABLE `artist_table` (
+  `artist_id` int NOT NULL AUTO_INCREMENT,
+  `artist_fname` varchar(45) DEFAULT NULL,
+  `artist_lname` varchar(45) DEFAULT NULL,
+  `artist_username` varchar(45) DEFAULT NULL,
+  `artist_email` varchar(45) DEFAULT NULL,
+  `artist_password` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`artist_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+Report Table
+
+CREATE TABLE `report_table` (
+  `report_id` int NOT NULL AUTO_INCREMENT,
+  `report_name` varchar(45) DEFAULT NULL,
+  `report_date` varchar(45) DEFAULT NULL,
+  `report_description` varchar(400) DEFAULT NULL,
+  `report_reciever` varchar(45) DEFAULT NULL,
+  `report_generator` int DEFAULT NULL,
+  PRIMARY KEY (`report_id`),
+  KEY `admin_id_idx` (`report_generator`),
+  CONSTRAINT `admin_id` FOREIGN KEY (`report_generator`) REFERENCES `admin_table` (`admin_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
